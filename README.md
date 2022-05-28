@@ -1,34 +1,30 @@
-# Next + Netlify Starter
+# Portfolio Project
+
+## Scope
+
+Design and develop a website to display my projects and skills to the world while maintaining optimized performance at low cost.
+
+## Stack
+
+### Jamstack
+
+Jamstack is an architecture designed to serve static web applications quickly and efficiently at low cost. This stack stood out to me because in many cases such as mine. You can achieve free webhosting service through numerous open source CDNs(Content Delivery Network). For more information on Jamstack visit [jamstack.org](https://jamstack.org/)
+
+### Next + Netlify
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
 
 This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. It also includes the [Essential Next.js Build Plugin](https://github.com/netlify/netlify-plugin-nextjs), which will allow for you to implement features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Want to create your own portfolio like mine?
 
 ### Installation options
 
 **Option one:** One-click deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+
+(If you click this button, it will create a new repo for you that looks exactly the template repo found [here](https://github.com/netlify-templates/next-netlify-starter), and sets that repo up immediately for deployment on Netlify)
 
 **Option two:** Manual clone
 
