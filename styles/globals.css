@@ -1,35 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  body {
+    @apply bg-neutral-800 m-0 p-0;
+  }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  * {
+    @apply box-border;
+  }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
-}
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .main {
+    @apply p-20 flex flex-col flex-1 justify-center items-center
+  }
+
+  .container {
+    @apply flex justify-center h-screen items-center m-auto;
+  }
+
+  .announce {
+    @apply font-bold text-white text-center text-7xl drop-shadow-[0_05px_05px_rgba(0,0,0,1)];
+  }
+
 }
