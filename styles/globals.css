@@ -46,7 +46,7 @@
   }
 
   .footer .netlifylogo {
-    @apply w-4 mr-1
+    @apply w-4
   }
 
   @media screen and (max-width:1024px) {
