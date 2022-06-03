@@ -26,8 +26,10 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavbackground)
-    let node = document.querySelector('.preload');
-    node.classList.remove('preload')
+    window.addEventListener("DOMContentLoaded", function(){
+      let node = document.querySelector('.preload');
+      node.classList.remove('preload')
+    })
   }, []);
 
   return (
