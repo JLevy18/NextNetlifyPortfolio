@@ -34,24 +34,24 @@ function Navbar() {
           <Link to='landing' className='navLogo' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>
             <Image src={logo} alt='icon'/>
           </Link>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className='nav-item'>
+                <Link to='about' spy={true} smooth={true} offset={-48} duration={500} onClick={closeMenu}>ABOUT</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='skills' spy={true} smooth={true} offset={-48} duration={500} onClick={closeMenu}>SKILLS</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='projects' spy={true} smooth={true} offset={-48} duration={500} onClick={closeMenu}>PROJECTS</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='contact' spy={true} smooth={true} offset={-48} duration={500} onClick={closeMenu}>CONTACT</Link>
+            </li>
+        </ul>
         <div className='hamburger' onClick={handleClick}>
           {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
               : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
         </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className='nav-item'>
-                <Link to='about' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>ABOUT</Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='skills' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>SKILLS</Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='projects' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>PROJECTS</Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='contact' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>CONTACT</Link>
-            </li>
-        </ul>
       </nav>
     </div>
   )

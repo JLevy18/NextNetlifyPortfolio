@@ -7,6 +7,7 @@ import Skills from '@components/Skills';
 import Projects from '@components/Projects';
 import Contact from '@components/Contact';
 import TypewriterComponent from 'typewriter-effect';
+import { Footer } from '@components/Footer';
 
 export default function Home() {
 
@@ -60,9 +61,13 @@ export default function Home() {
                 typewriter.pauseFor(300)
                 typewriter.changeDelay(75)
                 typewriter.typeString("Hi, I'm Justin")
-                typewriter.pauseFor(2300)
+                typewriter.pauseFor(2800)
                 typewriter.callFunction(() => {
-                  document.getElementsByClassName("Typewriter__cursor")[0].style.visibility = "hidden"
+                  if(window.matchMedia("only screen and (max-width: 940px)").matches){
+                    document.getElementsByClassName("Typewriter__cursor")[0].style.display = "none"
+                  }else{
+                    document.getElementsByClassName("Typewriter__cursor")[0].style.visibility = "hidden"
+                  }
                 })
                 typewriter.start()
               }}
@@ -75,6 +80,7 @@ export default function Home() {
         <Skills/>
         <Projects/>
         <Contact/>
+        <Footer/>
       </main>
     </>
   )
