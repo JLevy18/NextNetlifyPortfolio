@@ -26,6 +26,8 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavbackground)
+    let node = document.querySelector('.preload');
+    node.classList.remove('preload')
   }, []);
 
   return (
@@ -34,7 +36,7 @@ function Navbar() {
           <Link to='landing' className='navLogo' spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>
             <Image src={logo} alt='icon'/>
           </Link>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <ul className={click ? "nav-menu active" : "nav-menu preload"}>
             <li className='nav-item'>
                 <Link to='about' spy={true} smooth={true} offset={-48} duration={500} onClick={closeMenu}>ABOUT</Link>
             </li>

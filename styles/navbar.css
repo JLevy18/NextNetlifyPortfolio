@@ -61,6 +61,10 @@
             @apply block mr-5 mt-4 mb-auto
         }
 
+        .nav-menu .preload {
+            @apply flex-col m-0 text-center -mt-96
+        }
+
         .nav-menu {
             @apply flex-col m-0 text-center -mt-96 transition-all duration-500
         }
