@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    
+    #contact {
+        @apply h-screen z-10 bg-zinc-900 shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.8)]
+    }
+}

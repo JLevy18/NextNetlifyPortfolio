@@ -1,7 +1,13 @@
-import Head from 'next/head'
-import Announce from '@components/Announce'
-import Particles from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
+import Navbar from '@components/Navbar';
+import About from '@components/About';
+import Head from 'next/head';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import Skills from '@components/Skills';
+import Projects from '@components/Projects';
+import Contact from '@components/Contact';
+import TypewriterComponent from 'typewriter-effect';
+
 export default function Home() {
 
   const particlesInit = async (main) => {
@@ -17,80 +23,59 @@ export default function Home() {
     console.log(container);
   };
 
+  const particleOptions = require('particlesDefault.json');
+
   return (
-    <div className="container">
+    <>
       <Head>
         <title>LevTheDev</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
-
       <main>
-        <Announce text="Coming Soon :D"/>
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={{
-            fpsLimit: 120,
-            interactivity: {
-              detectsOn: "canvas",
-              events: {
-                onHover: {
-                  enable: true,
-                  mode: "grab",
-                },
-                resize: true,
-              },
-              modes: {
-                grab: {
-                  distance: 200,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#ffffff",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 200,
-                enable: true,
-                opacity: 0.2,
-                width: 1,
-              },
-              collisions: {
-                enable: false,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "out",
-                },
-                random: false,
-                speed: 3,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  area: 1000,
-                },
-                value: 80,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 0, max: 1 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+        <Navbar/>
+        <div className='landing'>
+          <div className='typer'>
+            <TypewriterComponent
+              options={{
+                autoStart: true,
+                loop: false,
+                cursor: "_",
+                delay: 100,
+              }}
+              onInit={(typewriter) => {
+                typewriter.callFunction(() => {
+                    if(window.matchMedia("only screen and (max-width: 940px)").matches){
+                      document.getElementsByClassName("Typewriter")[0].style.maxWidth = "320px"
+                      document.getElementsByClassName("Typewriter")[0].style.overflow = "hidden"
+                    }
+                })
+                typewriter.typeString("Loading...")
+                typewriter.pauseFor(550)
+                typewriter.deleteAll(50)
+                typewriter.pauseFor(300)
+                typewriter.changeDelay(75)
+                typewriter.typeString("Hi, I'm Justin")
+                typewriter.pauseFor(2300)
+                typewriter.callFunction(() => {
+                  document.getElementsByClassName("Typewriter__cursor")[0].style.visibility = "hidden"
+                })
+                typewriter.start()
+              }}
+            />
+          </div>
+          <object className="logo" type="image/svg+xml" data="/AnimatedLogo.svg">svg-anim</object>
+          <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
+        </div>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Contact/>
       </main>
-    </div>
+    </>
   )
 }

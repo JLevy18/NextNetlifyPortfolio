@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    
+    #about {
+        @apply h-screen z-20 bg-neutral-900 shadow-[0px_2px_50px_8px_rgba(0,0,0,0.8)]
+        
+    }
+
+    h1 {
+        @apply text-center relative top-1/2 drop-shadow-[0px_0px_2px_rgba(255,255,255,1.0)]
+    }
+}
