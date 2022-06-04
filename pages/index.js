@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import Navbar from '@components/Navbar';
 import About from '@components/About';
 import Head from 'next/head';
@@ -8,6 +9,7 @@ import Projects from '@components/Projects';
 import Contact from '@components/Contact';
 import TypewriterComponent from 'typewriter-effect';
 import { Footer } from '@components/Footer';
+import Socials from '@components/Socials';
 
 export default function Home() {
 
@@ -26,6 +28,15 @@ export default function Home() {
 
   const particleOptions = require('particlesDefault.json');
 
+
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('load', setLoaded(true))
+  }, []);
+
+
+
   return (
     <>
       <Head>
@@ -38,7 +49,10 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <main>
+
         <Navbar/>
+        <Socials/>
+
         <div className='landing'>
           <div className='typer'>
             <TypewriterComponent
@@ -50,7 +64,7 @@ export default function Home() {
               }}
               onInit={(typewriter) => {
                 typewriter.callFunction(() => {
-                    if(window.matchMedia("only screen and (max-width: 940px)").matches){
+                    if(window.matchMedia("only screen and (max-width: 550px)").matches){
                       document.getElementsByClassName("Typewriter")[0].style.maxWidth = "320px"
                       document.getElementsByClassName("Typewriter")[0].style.overflow = "hidden"
                     }
@@ -61,9 +75,9 @@ export default function Home() {
                 typewriter.pauseFor(300)
                 typewriter.changeDelay(75)
                 typewriter.typeString("Hi, I'm Justin")
-                typewriter.pauseFor(2800)
+                typewriter.pauseFor(1800)
                 typewriter.callFunction(() => {
-                  if(window.matchMedia("only screen and (max-width: 940px)").matches){
+                  if(window.matchMedia("only screen and (max-width: 550px)").matches){
                     document.getElementsByClassName("Typewriter__cursor")[0].style.display = "none"
                   }else{
                     document.getElementsByClassName("Typewriter__cursor")[0].style.visibility = "hidden"
@@ -73,9 +87,12 @@ export default function Home() {
               }}
             />
           </div>
+          <div className='motd'><p className={loaded ? 'toplineL' : 'topline'}><b>Software Developer</b> providing clients with</p><p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Industry Standard</b> software solutions</p></div>
           <object className="logo" type="image/svg+xml" data="/AnimatedLogo.svg">svg-anim</object>
           <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
         </div>
+
+
         <About/>
         <Skills/>
         <Projects/>
