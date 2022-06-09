@@ -22,7 +22,7 @@ const ContactForm = () => {
     return (
         <>
 
-            <div id={sent ? 'sent' : 'unsent'} className="bg-red-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
+            <div id={sent ? 'sent' : 'unsent'} className="bg-red-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 invisbile z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
                 <div className="text-2xl text-center text-shadow">NOTICE: Contact form is under maintenance, message NOT sent.</div>
                 {/* Thank you for reaching out, I'll be in touch soon. */}
             </div>

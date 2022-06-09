@@ -34,11 +34,11 @@
     }
 
     #contact .formWrap .content #unsent{
-        @apply invisible transition-all duration-700
+        @apply transition-opacity duration-700
     }
 
     #contact .formWrap .content #sent{
-        @apply opacity-100 visible transition-all duration-700
+        @apply opacity-100 visible transition-opacity duration-700
     }
 
     #contact .formWrap .content form {
