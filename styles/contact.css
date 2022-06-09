@@ -5,6 +5,66 @@
 @layer base{
     
     #contact {
-        @apply h-screen z-10 bg-zinc-900 shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.8)]
+        @apply flex h-screen z-10 pl-24 overflow-clip bg-zinc-900 shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.8)]
     }
+
+    #contact .infoWrap{
+        @apply h-full w-[45%] flex items-center justify-center
+    
+    }
+    
+    #contact .infoWrap .content {
+        @apply flex flex-col h-1/2 items-start justify-center
+    }
+
+    #contact .infoWrap b{
+        @apply text-6xl text-[#1e79e1] text-shadow-md pb-4
+    }
+
+    #contact .infoWrap p{
+        @apply text-xl text-zinc-300 text-shadow-md pb-2
+    }
+
+    #contact .formWrap{
+        @apply w-[55%] h-full bg-zinc-900 ml-auto boxshadow flex flex-col items-center justify-center
+    }
+
+    #contact .formWrap .content {
+        @apply w-full flex justify-center
+    }
+
+    #contact .formWrap .content #unsent{
+        @apply invisible transition-all duration-700
+    }
+
+    #contact .formWrap .content #sent{
+        @apply opacity-100 visible transition-all duration-700
+    }
+
+    #contact .formWrap .content form {
+        @apply w-1/2
+    }
+
+
+    @layer utilities {
+        @variants responsive {
+            .text-shadow {
+              text-shadow: 1px 2px 5px black;
+            }
+            .text-shadow-md {
+              text-shadow: 4px 4px 10px black;
+            }
+            .text-shadow-lg {
+              text-shadow: 8px 8px 15px black;
+            }
+            .text-shadow-none {
+              text-shadow: none;
+            }
+
+            .boxshadow{
+              -webkit-box-shadow:inset 10px 0 10px 1px rgba(0,0,0,.8);
+              box-shadow:inset 15px 0 25px 1px rgba(0,0,0,.6);
+            }
+        } 
+    } 
 }

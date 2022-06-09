@@ -77,6 +77,7 @@ export default function Home() {
                 typewriter.typeString("Hi, I'm Justin")
                 typewriter.pauseFor(1800)
                 typewriter.callFunction(() => {
+                  //Remove cursor on smaller devices rather than hiding it
                   if(window.matchMedia("only screen and (max-width: 550px)").matches){
                     document.getElementsByClassName("Typewriter__cursor")[0].style.display = "none"
                   }else{
@@ -88,7 +89,7 @@ export default function Home() {
             />
           </div>
           <div className='motd'><p className={loaded ? 'toplineL' : 'topline'}><b>Software Developer</b> providing clients with</p><p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Industry Standard</b> software solutions</p></div>
-          <object className="logo" type="image/svg+xml" data="/AnimatedLogo.svg">svg-anim</object>
+          <object className="logo" type="image/svg+xml" data="/AnimatedLogo.svg">LevTheDev</object>
           <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
         </div>
 
@@ -97,8 +98,9 @@ export default function Home() {
         <Skills/>
         <Projects/>
         <Contact/>
-        <Footer/>
       </main>
+
+      <Footer/>
     </>
   )
 }

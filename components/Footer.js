@@ -1,5 +1,4 @@
 import React from 'react'
-import netlogo from '../public/netlify-logo.svg'
 
 export const Footer = () => {
   return (

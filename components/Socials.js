@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaGithub, FaYoutube, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaYoutube, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-scroll'
 
 function Socials() {
   return (
