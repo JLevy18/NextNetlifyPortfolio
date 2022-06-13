@@ -105,17 +105,11 @@
     @apply flex w-full bottom-0 max-h-fit justify-between bg-neutral-900
   }
 
-  .footer .copyright, .footer .netlify {
+  .footer .copyright{
     @apply m-auto text-gray-500 py-2
   }
 
-  .netlify {
-    @apply flex
-  }
 
-  .footer .netlifylogo {
-    @apply w-5 pr-1
-  }
 
 
   /* Mobile modifications */
@@ -198,10 +192,6 @@
 
       .socials {
         @apply hidden
-      }
-
-      .footer {
-        @apply text-sm flex-col
       }
   }
 
