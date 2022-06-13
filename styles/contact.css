@@ -42,7 +42,62 @@
     }
 
     #contact .formWrap .content form {
-        @apply w-1/2
+        @apply w-2/3
+    }
+
+    @media screen and (max-width:1500px) {
+
+        #contact .infoWrap b{
+            @apply text-5xl
+        }
+    
+        #contact .infoWrap p{
+            @apply text-lg
+        }
+
+
+    }
+
+    @media screen and (max-width:1300px) {
+
+        #contact .infoWrap b{
+            @apply text-4xl
+        }
+    
+        #contact .infoWrap p{
+            @apply text-base
+        }
+
+        #contact .formWrap .content form {
+            @apply w-3/4
+        }
+
+    }
+
+    @media screen and (max-width:940px) {
+
+        #contact {
+            @apply flex-col px-4
+        }
+
+        #contact .infoWrap{
+            @apply w-full h-fit py-16
+        }
+
+        #contact .formWrap{
+            @apply w-full shadow-none bg-transparent justify-start
+        }
+        
+        #contact .formWrap .content #popup{
+            @apply text-xl
+        }
+
+    }
+
+    @media screen and (max-width:550px) {
+        #contact .formWrap .content form{
+            @apply w-full px-1
+        }
     }
 
 
@@ -62,9 +117,10 @@
             }
 
             .boxshadow{
-              -webkit-box-shadow:inset 10px 0 10px 1px rgba(0,0,0,.8);
+              -webkit-box-shadow:inset 15px 0 25px 1px rgba(0,0,0,.6);
               box-shadow:inset 15px 0 25px 1px rgba(0,0,0,.6);
             }
+
         } 
     } 
 }

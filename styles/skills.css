@@ -144,6 +144,11 @@
             @apply text-base mt-5 tracking-widest
         }
 
+        #skills .iconWrapper #js{
+            @apply text-[.9rem]
+        }
+        
+
         #skills .card .content {
             @apply overflow-scroll h-full px-0
         }

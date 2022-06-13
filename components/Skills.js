@@ -27,7 +27,7 @@ function Skills() {
             </div>
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/js.svg'></object>
-              <p>Javascript</p>
+              <p id='js'>Javascript</p>
             </div>
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/react.svg'></object>

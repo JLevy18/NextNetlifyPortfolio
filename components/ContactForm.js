@@ -3,27 +3,23 @@ import React, { useState } from "react";
 const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 const ContactForm = () => {
-    const [submitted, setSubmitted] = useState(false);
     const [sent, setSent] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault()
+        document.getElementById("messageForm").reset()
         setTimeout(() => {
-            setSubmitted(true);
-            document.getElementById("messageForm").reset();
+            setSent(true)
             setTimeout(() => {
-                setSent(true);
-                setTimeout(() => {
-                    setSent(false);
-                }, 4000);
-            }, 100);
-        }, 100);
+                setSent(false)
+            }, 4000)
+        }, 100)
     };
 
     return (
         <>
 
-            <div id={sent ? 'sent' : 'unsent'} className="bg-red-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 invisbile z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
-                <div className="text-2xl text-center text-shadow">NOTICE: Contact form is under maintenance, message NOT sent.</div>
+            <div id={sent ? 'sent' : 'unsent'} className="bg-yellow-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 invisbile z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
+                <div id='popup' className="text-2xl text-center text-shadow">*ATTENTION* Contact form is unavailable at this time.</div>
                 {/* Thank you for reaching out, I'll be in touch soon. */}
             </div>
 
