@@ -5,18 +5,18 @@
 @layer base{
     
     #projects {
-        @apply h-screen z-20 bg-neutral-900 px-32 select-none
+        @apply h-screen z-20 bg-neutral-900 px-32 select-none 
     }
 
 
     /* Grid */
 
     #projects .pGrid{
-        @apply h-full py-16 grid grid-cols-3 gap-10 container m-auto
+        @apply h-full w-full py-16 grid grid-cols-1 gap-10 container m-auto place-items-center
     }
 
     #projects .gridCard{
-        @apply flex flex-col p-2
+        @apply flex flex-col p-2 h-3/5 w-2/5
         
         bg-neutral-800 shadow-[0px_0px_15px_1px_rgba(0,0,0,0.8)]
     }
@@ -90,18 +90,18 @@
 
 
 
-    @media screen and (max-width:1700px) {
+    @media screen and (max-width:1300px) {
 
         #projects {
-            @apply h-fit
+            @apply h-[75vh]
         }
 
         #projects .pGrid {
-            @apply grid-cols-2 gap-5 place-items-center
+            @apply grid-cols-1 gap-5 place-items-center
         }
 
         #projects .gridCard {
-            @apply w-full h-full
+            @apply w-2/3 h-full
         }  
 
         #projects .gridCard .thumbnail{
