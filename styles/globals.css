@@ -102,7 +102,7 @@
   /* Footer */
 
   .footer {
-    @apply flex w-full bottom-0 max-h-fit justify-between flex-wrap bg-neutral-900
+    @apply flex w-full bottom-0 max-h-fit justify-between bg-neutral-900
   }
 
   .footer .copyright, .footer .netlify {
@@ -114,7 +114,7 @@
   }
 
   .footer .netlifylogo {
-    @apply w-5 pr-1 flex-shrink-0
+    @apply w-5 pr-1
   }
 
 
@@ -201,7 +201,7 @@
       }
 
       .footer {
-        @apply text-sm
+        @apply text-sm flex-col
       }
   }
 
