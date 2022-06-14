@@ -11,13 +11,12 @@ const ContactForm = () => {
 
     const onLoad = () => {
 
-        captchaRef.current.execute();
     }
 
     useEffect(() => {
         
         if (token)
-            console.log('hCaptcha Token: ${token}');
+            console.log(`hCaptcha Token: ${token}`);
 
     }, [token]);
 
