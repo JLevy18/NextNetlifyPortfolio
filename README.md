@@ -4,8 +4,6 @@
 
 Design and develop a website to display my projects and skills to the world while maintaining optimized performance at low cost.
 
-*Due to some API keys needing to be kept private, the source may be slightly different from the live site. That said, the code structure remains the same*
-
 ## Stack
 
 ### Jamstack
