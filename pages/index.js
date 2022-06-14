@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Navbar from '@components/Navbar';
 import About from '@components/About';
 import Head from 'next/head';
@@ -31,15 +31,6 @@ export default function Home() {
 
   const [loaded, setLoaded] = useState(false)
 
-  useEffect(() => {
-    window.addEventListener('load', () => {
-        setLoaded(true)
-        if(window.matchMedia("only screen and (max-width: 400px)").matches){
-          window.alert("For best viewing experience, please use laptop or desktop.")
-        }
-    
-    })
-  }, []);
 
 
 
