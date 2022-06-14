@@ -30,7 +30,7 @@ function Projects() {
             <Link to='landing' className='site' spy={true} smooth={true} offset={0} duration={500}>
               <FaGlobe size={24}/>
             </Link>
-            <button onClick={() => window.open('https://github.com/JLevy18/NextNetlifyPortfolio', '_blank')}>
+            <button onClick={() => window.open('https://github.com/JLevy18/NextNetlifyPortfolioPublic', '_blank')}>
               <FaCode size={24}/>
             </button>
           </div>
