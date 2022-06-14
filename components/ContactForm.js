@@ -27,10 +27,14 @@ const ContactForm = () => {
             console.log(result.text);
             setResponseState('success');
             setResponseSuccess(true);
+            captchaRef.current.resetCaptcha();
+            form.current.reset();
         }, (error) => {
             console.log(error.text);
             setResponseState('error');
             setResponseError(true);
+            captchaRef.current.resetCaptcha();
+            form.current.reset();
         });
         
     };
