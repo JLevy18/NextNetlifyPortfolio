@@ -1,50 +1,83 @@
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import React, { useState, useRef, useEffect } from "react";
-
-const FORM_ENDPOINT = ""; // TODO - fill on the later step
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
 
+    const form = useRef();
     const [token, setToken] = useState(null);
     const captchaRef = useRef(null);
-    const [sent, setSent] = useState(false);
-
-    const onLoad = () => {
-
-    }
-
-    useEffect(() => {
-        
-        if (token)
-            console.log(`hCaptcha Token: ${token}`);
-
-    }, [token]);
-
+    const [formResponseState, setResponseState] = useState('default');
+    const [formResponseSuccess, setResponseSuccess] = useState(false);
+    const [formResponseWarning, setResponseWarning] = useState(false);
+    const [formResponseError, setResponseError] = useState(false);
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        document.getElementById("messageForm").reset()
-        setTimeout(() => {
-            setSent(true)
-            setTimeout(() => {
-                setSent(false)
-            }, 4000)
-        }, 100)
+        e.preventDefault();
+
+        if (!token) {
+            setResponseState('warning');
+            setResponseWarning(true);
+            return;
+        }
+
+        console.log('Email Sent')
+        emailjs.sendForm('service_pb0z6om','template_t2frnua',form.current,'qKrW5ovOhfWQy4zSu')
+        .then((result) => {
+            console.log(result.text);
+            setResponseState('success');
+            setResponseSuccess(true);
+        }, (error) => {
+            console.log(error.text);
+            setResponseState('error');
+            setResponseError(true);
+        });
+        
     };
+
+    useEffect(() => {
+
+        if (formResponseState == 'success') {
+
+            setTimeout(() => {
+                setResponseSuccess(false);
+                setResponseState('default');
+            }, 4000)
+
+        }else if (formResponseState == 'warning') {
+            setTimeout(() => {
+                setResponseWarning(false);
+                setResponseState('default');
+            }, 4000)
+        }else if (formResponseState == 'error') {
+            setTimeout(() => {
+                setResponseError(false);
+                setResponseState('default');
+            }, 4000)
+        }
+
+    }, [formResponseState] );
 
     return (
         <>
-            {/*
-            <div id={sent ? 'sent' : 'unsent'} className="bg-yellow-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
-                <div id='popupText' className="text-2xl text-center text-shadow">*ATTENTION* Contact form is unavailable at this time.</div>
-                 Thank you for reaching out, I'll be in touch soon. 
-            </div>*/}
+
+            <div id="response" className={formResponseState}>
+                <div className={formResponseSuccess ? 'success active' : 'success'}>
+                    <p>Your message was sent successfully, we will be in touch soon!</p>
+                </div>
+                <div className={formResponseWarning ? 'warning active' : 'warning'}>
+                    <p><b>Warning: </b> Human verification is required to send a message!</p>
+                </div>
+                <div className={formResponseError ? 'error active' : 'error'}>
+                    <p><b>Error: </b> Something went wrong and your message wasn't sent. Please try again in a few minutes.</p>
+                </div>
+            </div>
+
 
             <form
+                ref={form}
                 id="messageForm"
-                action={FORM_ENDPOINT}
                 onSubmit={handleSubmit}
-                method="POST"
             >
 
                 <h1 className="py-8 text-center text-3xl text-zinc-100 underline underline-offset-8 font-mono drop-shadow-[0px_0px_2px_rgba(255,255,255,0.6)]">Send A Message</h1>
@@ -53,7 +86,7 @@ const ContactForm = () => {
                     <input
                         type="text"
                         placeholder="Your name"
-                        name="name"
+                        name="user_name"
                         className="px-3 py-3 placeholder-gray-200 text-zinc-200 relative bg-zinc-700 rounded text-sm border-0 shadow outline-none focus:outline-none focus:none w-full"
                         required
                     />
@@ -63,7 +96,7 @@ const ContactForm = () => {
                     <input
                         type="email"
                         placeholder="Email"
-                        name="email"
+                        name="user_email"
                         className="px-3 py-3 placeholder-gray-200 text-zinc-200 relative bg-zinc-700 rounded text-sm border-0 shadow outline-none focus:outline-none focus:none w-full"
                         required
                     />
@@ -80,7 +113,6 @@ const ContactForm = () => {
                 <div className="mb-3 pt-0">
                     <HCaptcha
                         sitekey="2f652643-7cbf-4034-af7e-baab6eb083b3"
-                        onLoad={onLoad}
                         onVerify={setToken}
                         ref={captchaRef}
                     />
