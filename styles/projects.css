@@ -12,11 +12,11 @@
     /* Grid */
 
     #projects .pGrid{
-        @apply h-full w-full py-16 grid grid-cols-1 gap-10 container m-auto place-items-center
+        @apply h-full w-full py-16 grid grid-cols-2 gap-10 container m-auto place-items-center
     }
 
     #projects .gridCard{
-        @apply flex flex-col p-2 h-3/5 w-2/5
+        @apply flex flex-col p-2 h-4/5 w-full
         
         bg-neutral-800 shadow-[0px_0px_15px_1px_rgba(0,0,0,0.8)]
     }
@@ -44,7 +44,7 @@
     /* Description */
 
     #projects .gridCard .desc{
-        @apply h-fit w-full p-2
+        @apply h-fit w-full p-2 my-auto
     }
 
     #projects .gridCard .desc h1{
@@ -57,6 +57,9 @@
 
 
     /* Tools */
+    #projects .gridCard .tools{
+        @apply my-auto
+    }
 
     #projects .gridCard .tools h1{
         @apply text-center underline tracking-wider text-lg
@@ -92,8 +95,8 @@
 
     @media screen and (max-width:1300px) {
 
-        #projects {
-            @apply h-[75vh]
+        #projects{
+            @apply min-h-fit h-fit
         }
 
         #projects .pGrid {
@@ -101,16 +104,8 @@
         }
 
         #projects .gridCard {
-            @apply w-2/3 h-full
+            @apply w-full h-[50vh]
         }  
-
-        #projects .gridCard .thumbnail{
-            @apply bg-[#1e79e1] h-fit
-        }
-
-        #projects .gridCard .thumbnail img{
-            @apply invisible 
-        }
 
         #projects .gridCard .thumbnail h1{
             @apply text-3xl 
@@ -140,20 +135,31 @@
 
     @media screen and (max-width:940px) {
         #projects{
-            @apply px-16
+            @apply p-0 min-h-fit h-fit
         }
 
         #projects .pGrid {
-            @apply grid-cols-1
+            @apply grid-cols-1 min-w-full m-auto px-4 
         }
+
+
     }
 
+    
     @media screen and (max-width:550px) {
-        #projects{
-            @apply px-2
-        }
+        #projects .gridCard .tools .items{
+            @apply flex-col justify-center items-center
+        } 
 
+        #projects .gridCard .tools .items p{
+            @apply py-1
+        }
+        
+        #projects .gridCard#rlgl .thumbnail h1{
+            @apply text-xl
+        }
     }
+
 
 
     @layer utilities {

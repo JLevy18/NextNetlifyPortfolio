@@ -7,8 +7,7 @@ function Contact() {
       <div className='infoWrap'>
         <div className='content'>
           <b>Lets work together...</b>
-          <p>Whatever your software needs, I've got you covered.</p>
-          <p>Get in touch to learn more!</p>
+          <p>Get in touch for answers to any questions about services, scheduling a project, or to learn more about what I do.</p>
         </div>
       </div>
       <div className='formWrap'>

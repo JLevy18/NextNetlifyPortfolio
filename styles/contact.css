@@ -14,7 +14,7 @@
     }
     
     #contact .infoWrap .content {
-        @apply flex flex-col h-1/2 items-start justify-center
+        @apply flex flex-col h-1/2 items-start justify-center mx-10
     }
 
     #contact .infoWrap b{
@@ -81,23 +81,25 @@
         }
 
         #contact .infoWrap{
-            @apply w-full h-fit py-16
+            @apply w-full h-fit pt-16
         }
 
         #contact .formWrap{
-            @apply w-full shadow-none bg-transparent justify-start
+            @apply w-full shadow-none bg-transparent justify-start pt-8
         }
         
         #contact .formWrap .content #popup{
             @apply text-xl
         }
 
-    }
-
-    @media screen and (max-width:550px) {
         #contact .formWrap .content form{
             @apply w-full px-1
         }
+
+    }
+
+    @media screen and (max-width:550px) {
+        
     }
 
 

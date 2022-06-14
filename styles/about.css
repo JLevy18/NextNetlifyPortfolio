@@ -23,7 +23,7 @@
     }
 
     #about .card .content{
-        @apply h-4/5 flex items-start justify-center py-4 px-8 
+        @apply h-4/5 flex items-start justify-center py-4 px-8
 
         text-zinc-200 text-[2rem] text-center text-shadow-md
     }
@@ -59,7 +59,7 @@
         }
 
         #about .card{
-            @apply h-2/5 w-4/5
+            @apply h-2/5 w-[89%] 
         }
 
     }
@@ -82,7 +82,15 @@
     }
 
     @media screen and (max-width:550px) {
+
+        #about{
+            @apply h-fit
+        }
         
+        #about .card {
+            @apply my-4
+        }
+
         #about .card .content {
             @apply overflow-scroll
         }
