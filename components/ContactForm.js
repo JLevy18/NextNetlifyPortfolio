@@ -22,7 +22,6 @@ const ContactForm = () => {
         }
 
         console.log('Email Sent')
-        emailjs.history()
         emailjs.sendForm('service_pb0z6om','template_t2frnua',form.current,'qKrW5ovOhfWQy4zSu')
         .then((result) => {
             console.log(result.text);
