@@ -34,7 +34,7 @@
     }
 
     #contact .formWrap .content #unsent{
-        @apply transition-opacity duration-700
+        @apply transition-opacity duration-700 hidden
     }
 
     #contact .formWrap .content #sent{
@@ -88,7 +88,7 @@
             @apply w-full shadow-none bg-transparent justify-start pt-8
         }
         
-        #contact .formWrap .content #popup{
+        #contact .formWrap .content #popupText{
             @apply text-xl
         }
 
@@ -99,7 +99,9 @@
     }
 
     @media screen and (max-width:550px) {
-        
+        #contact{
+            @apply h-fit
+        }
     }
 
 

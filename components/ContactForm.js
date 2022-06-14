@@ -1,9 +1,27 @@
-import React, { useState } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import React, { useState, useRef, useEffect } from "react";
 
 const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 const ContactForm = () => {
+
+    const [token, setToken] = useState(null);
+    const captchaRef = useRef(null);
     const [sent, setSent] = useState(false);
+
+    const onLoad = () => {
+
+        captchaRef.current.execute();
+    }
+
+    useEffect(() => {
+        
+        if (token)
+            console.log('hCaptcha Token: ${token}');
+
+    }, [token]);
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
         document.getElementById("messageForm").reset()
@@ -17,11 +35,11 @@ const ContactForm = () => {
 
     return (
         <>
-
-            <div id={sent ? 'sent' : 'unsent'} className="bg-yellow-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 invisbile z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
-                <div id='popup' className="text-2xl text-center text-shadow">*ATTENTION* Contact form is unavailable at this time.</div>
-                {/* Thank you for reaching out, I'll be in touch soon. */}
-            </div>
+            {/*
+            <div id={sent ? 'sent' : 'unsent'} className="bg-yellow-600 shadow-[0px_0px_35px_15px_rgba(0,0,0,0.8)] opacity-0 z-[999] fixed w-screen h-[10%] left-0 bottom-0 flex items-center justify-center">
+                <div id='popupText' className="text-2xl text-center text-shadow">*ATTENTION* Contact form is unavailable at this time.</div>
+                 Thank you for reaching out, I'll be in touch soon. 
+            </div>*/}
 
             <form
                 id="messageForm"
@@ -52,7 +70,7 @@ const ContactForm = () => {
                     />
                 </div>
 
-                <div className="mb-3 pt-0">
+                <div className="mb-2 pt-0">
                     <textarea
                         placeholder="Your message"
                         name="message"
@@ -60,7 +78,14 @@ const ContactForm = () => {
                         required
                     />
                 </div>
-
+                <div className="mb-3 pt-0">
+                    <HCaptcha
+                        sitekey="2f652643-7cbf-4034-af7e-baab6eb083b3"
+                        onLoad={onLoad}
+                        onVerify={setToken}
+                        ref={captchaRef}
+                    />
+                </div>
                 <div className="mb-3 pt-0">
                     <button
                         className="bg-blue-500 text-zinc-100 active:bg-[#1e79e1] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
