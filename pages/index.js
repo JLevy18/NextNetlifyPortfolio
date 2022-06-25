@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '@components/Navbar';
 import About from '@components/About';
 import Head from 'next/head';
@@ -31,7 +31,9 @@ export default function Home() {
 
   const [loaded, setLoaded] = useState(false)
 
-
+  useEffect(() => {
+    window.addEventListener('load', setLoaded(true))
+  }, []);
 
 
   return (
