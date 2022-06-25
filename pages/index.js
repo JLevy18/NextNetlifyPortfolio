@@ -68,10 +68,7 @@ export default function Home() {
                       document.getElementsByClassName("Typewriter")[0].style.overflow = "hidden"
                     }
                 })
-                typewriter.typeString("Loading...")
-                typewriter.pauseFor(300)
-                typewriter.deleteAll(50)
-                typewriter.pauseFor(300)
+                typewriter.pauseFor(1100)
                 typewriter.changeDelay(75)
                 typewriter.typeString("Hi, I'm Justin")
                 typewriter.pauseFor(1800)
