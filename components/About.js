@@ -10,7 +10,7 @@ function About() {
           <h1><CgProfile size={48} style={{paddingRight: 5}}/> Profile</h1>
         </div>
         <div className='content'>
-          <p>My name is Justin, also known as LevTheDev. I’m a 22-year-old software developer, gamer, and content creator. I put together YouTube videos documenting the development of my projects as well as delivering tips and tricks I’ve learned throughout my career.</p>
+          <p>My name is Justin, also known as LevTheDev. I’m a 22-year-old software developer, gamer, and indie game dev. I also occasionally create videos documenting the development of my projects as well as delivering tips and tricks I’ve learned throughout my career over on my YouTube channel.</p>
         </div>
       </div>
       <div className='card'>
