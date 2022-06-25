@@ -59,7 +59,7 @@ export default function Home() {
                 autoStart: true,
                 loop: false,
                 cursor: "_",
-                delay: 100,
+                delay: 50,
               }}
               onInit={(typewriter) => {
                 typewriter.callFunction(() => {
@@ -69,7 +69,7 @@ export default function Home() {
                     }
                 })
                 typewriter.typeString("Loading...")
-                typewriter.pauseFor(550)
+                typewriter.pauseFor(300)
                 typewriter.deleteAll(50)
                 typewriter.pauseFor(300)
                 typewriter.changeDelay(75)
@@ -88,7 +88,7 @@ export default function Home() {
             />
           </div>
           <div className='motd'><p className={loaded ? 'toplineL' : 'topline'}><b>Software Developer</b> providing clients with</p><p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Industry Standard</b> software solutions</p></div>
-          <object className="logo" type="image/svg+xml" data="/AnimatedLogo.svg">LevTheDev</object>
+          <object className="logo" type="image/svg+xml" data="/LogoBounceIn.svg">LevTheDev</object>
           <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
         </div>
 

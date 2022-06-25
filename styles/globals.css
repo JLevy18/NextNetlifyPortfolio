@@ -82,7 +82,7 @@
   }
 
   .motd .bottomlineL, .motd .toplineL{
-    @apply transition-all delay-[4500ms] duration-[1500ms] opacity-100
+    @apply transition-all delay-[2300ms] duration-[1500ms] opacity-100
   }
 
 
