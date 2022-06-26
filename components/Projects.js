@@ -54,7 +54,7 @@ function Projects() {
             </div>
           </div>
           <div className='links'>
-            <button onClick={() => window.open('', '_blank')}>
+            <button onClick={() => window.open('https://www.youtube.com/watch?v=WIPBdc8r3qQ', '_blank')}>
               <FaGlobe size={24}/>
             </button>
           </div>
