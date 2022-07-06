@@ -17,38 +17,67 @@ function Skills() {
       </div>
       <div className='skillSec'>
           <div className='skillGrid'>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/html5.svg'></object>
               <p>HTML5</p>
             </div>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/css3.svg'></object>
               <p>CSS3</p>
             </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/react.svg'></object>
+              <p>ReactJS</p>
+            </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/next.svg'></object>
+              <p id='js'>NextJS</p>
+            </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/java.svg'></object>
+              <p>Java</p>
+            </div>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/js.svg'></object>
               <p id='js'>Javascript</p>
             </div>
-            <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/react.svg'></object>
-              <p>React</p>
-            </div>
-            <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/unreal.svg'></object>
-              <p>Unreal</p>
-            </div>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/c++.svg'></object>
               <p>C++</p>
             </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/sql.svg'></object>
+              <p>SQL</p>
+            </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/unreal.svg'></object>
+              <p>Unreal</p>
+            </div>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/opengl.svg'></object>
               <p>OpenGL</p>
             </div>
+
             <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/git.svg'></object>
               <p>Git</p>
             </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/bash.svg'></object>
+              <p>Bash</p>
+            </div>
+
           </div>
       </div>
     </div>

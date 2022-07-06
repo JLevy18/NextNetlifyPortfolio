@@ -12,7 +12,7 @@
     /* Grid */
 
     #projects .pGrid{
-        @apply h-full w-full py-16 grid grid-cols-2 gap-10 container m-auto place-items-center
+        @apply h-full w-full py-16 grid grid-cols-3 gap-10 container m-auto place-items-center
     }
 
     #projects .gridCard{

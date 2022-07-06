@@ -90,15 +90,15 @@
     @media screen and (max-width:1300px) {
 
         #skills {
-            @apply flex-col px-4
+            @apply flex-col px-4 h-fit
         }
 
         #skills .skillBrief {
-            @apply w-full items-end
+            @apply w-full items-end pt-5
         }
 
         #skills .skillSec {
-            @apply w-full
+            @apply w-4/5 m-auto 
         }
 
         #skills .card {
@@ -131,7 +131,7 @@
     }
 
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:700px) {
         #skills {
             @apply p-4
         }
@@ -172,7 +172,7 @@
   
     }
 
-    @media screen and (max-width:350px) {
+    @media screen and (max-width:450px) {
 
         #skills{
             @apply h-fit

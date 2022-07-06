@@ -8,8 +8,34 @@ function Projects() {
     <div id='projects'>
       <div className='pGrid'>
 
+        {/* 1. VisualizeIt */}
 
-        {/* 4. Portfolio */}
+        <div className='gridCard'>
+          <div className='thumbnail'>
+            <h1>VisualizeIt</h1>
+            <Image src='/placeholderThumb.png' layout='fill' />
+          </div>
+          <div className='desc'>
+            <h1>Brief</h1>
+            <p>A full-stack web-app designed to visualize a variety of algorithms. The objective of this project is to make it easy to understand how algorithms work.</p>
+          </div>
+          <div className='tools'>
+            <h1>Stack</h1>
+            <div className='items'>
+              <p>React</p> <p>TailwindCSS</p> <p>Netlify</p> <p>Git</p>
+            </div>
+          </div>
+          <div className='links'>
+            <button onClick={() => window.open('https://ltd-visualizeit.netlify.app', '_blank')}>
+              <FaGlobe size={24}/>
+            </button>
+            <button onClick={() => window.open('https://github.com/JLevy18/VisualizeIt', '_blank')}>
+              <FaCode size={24}/>
+            </button>
+          </div>
+        </div>
+
+        {/* 2. Portfolio */}
 
         <div className='gridCard'>
           <div className='thumbnail'>
@@ -36,7 +62,7 @@ function Projects() {
           </div>
         </div>
 
-        {/* 6. RLGL */}
+        {/* 3. RLGL */}
 
         <div className='gridCard' id='rlgl'>
           <div className='thumbnail'>
@@ -50,7 +76,7 @@ function Projects() {
           <div className='tools'>
             <h1>Stack</h1>
             <div className='items'>
-              <p>Unreal</p><p>Git</p><p>Agile/Scrum</p>
+              <p>Unreal Engine 4</p><p>Git</p><p>Agile/Scrum</p>
             </div>
           </div>
           <div className='links'>
