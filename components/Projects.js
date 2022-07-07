@@ -76,7 +76,7 @@ function Projects() {
           <div className='tools'>
             <h1>Stack</h1>
             <div className='items'>
-              <p>Unreal Engine 4</p><p>Git</p><p>Agile/Scrum</p>
+              <p>Unreal Engine 4</p><p>C++</p><p>Agile/Scrum</p>
             </div>
           </div>
           <div className='links'>
