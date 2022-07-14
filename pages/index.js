@@ -85,7 +85,7 @@ export default function Home() {
             />
           </div>
           <div className='motd'><p className={loaded ? 'toplineL' : 'topline'}><b>Software Developer</b> providing clients with</p><p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Industry Standard</b> software solutions</p></div>
-          <object className="logo" type="image/svg+xml" data="/LogoBounceIn.svg">LevTheDev</object>
+          <object className={loaded ? 'logoL' : 'logo'} type="image/svg+xml" data="/LogoBounceIn.svg">LevTheDev</object>
           <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
         </div>
 

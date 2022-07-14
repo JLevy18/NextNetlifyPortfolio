@@ -11,7 +11,7 @@ function Skills() {
           </div>
           <p className='quote'>“Live as if you were to die tomorrow. Learn as if you were to live forever.” <br/>– Mahatma Gandhi</p>
           <div className='content'>
-            <p>Software development typifies a <b>rapidly evolving</b> industry such that constantly learning how others <b>efficiently</b> implement systems is paramount to producing <b>successful</b> solutions.</p>
+            <p>Software development embodies a <b>rapidly evolving</b> industry such that constantly learning how others <b>efficiently</b> implement systems is paramount to producing <b>successful</b> solutions.</p>
           </div>
         </div>
       </div>
@@ -39,23 +39,23 @@ function Skills() {
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/java.svg'></object>
-              <p>Java</p>
-            </div>
-
-            <div className="iconWrapper">
               <object className="icon" type="image/svg+xml" data='/skills/js.svg'></object>
               <p id='js'>Javascript</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/c++.svg'></object>
-              <p>C++</p>
+              <object className="icon" type="image/svg+xml" data='/skills/sql.svg'></object>
+              <p>SQL</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/sql.svg'></object>
-              <p>SQL</p>
+              <object className="icon" type="image/svg+xml" data='/skills/java.svg'></object>
+              <p>Java</p>
+            </div>
+
+            <div className="iconWrapper">
+              <object className="icon" type="image/svg+xml" data='/skills/c++.svg'></object>
+              <p>C++</p>
             </div>
 
             <div className="iconWrapper">
