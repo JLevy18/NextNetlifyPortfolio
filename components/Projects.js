@@ -8,7 +8,7 @@ function Projects() {
     <div id='projects'>
       <div className='pGrid'>
 
-        {/* 1. VisualizeIt */}
+        {/* 1. VisualizeIt 
 
         <div className='gridCard'>
           <div className='thumbnail'>
@@ -33,7 +33,7 @@ function Projects() {
               <FaCode size={24}/>
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* 2. Portfolio */}
 
