@@ -68,7 +68,7 @@ export default function Home() {
                       document.getElementsByClassName("Typewriter")[0].style.overflow = "hidden"
                     }
                 })
-                typewriter.pauseFor(1100)
+                typewriter.pauseFor(200)
                 typewriter.changeDelay(75)
                 typewriter.typeString("Hi, I'm Justin")
                 typewriter.pauseFor(1800)
@@ -84,8 +84,12 @@ export default function Home() {
               }}
             />
           </div>
-          <div className='motd'><p className={loaded ? 'toplineL' : 'topline'}><b>Software Developer</b> providing clients with</p><p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Industry Standard</b> software solutions</p></div>
-          <object className={loaded ? 'logoL' : 'logo'} type="image/svg+xml" data="/LogoBounceIn.svg">LevTheDev</object>
+          <div className='motd'>
+            <p className={loaded ? 'toplineL' : 'topline'}><b>Fullstack Software Engineer</b></p>
+            <p className={loaded ? 'midlineL' : 'midline'}>and</p>
+            <p className={loaded ? 'bottomlineL' : 'bottomline'}><b>Indie Game Dev</b></p>
+          </div>
+          <object className={loaded ? 'logoL' : 'logo'} type="image/svg+xml" data="/Logo.svg">LevTheDev</object>
           <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particleOptions} />
         </div>
 
