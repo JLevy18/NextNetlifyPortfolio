@@ -5,7 +5,7 @@
 @layer base{
     
     #projects {
-        @apply h-screen z-20 bg-neutral-900 px-32 select-none flex justify-center flex-col
+        @apply h-screen max-h-fit z-20 bg-neutral-900 px-32 select-none flex justify-center flex-col items-center
     }
 
     /* Grid Card Positions */
@@ -17,11 +17,11 @@
     }
 
     #projects .pGrid {
-        @apply h-2/3 w-3/5 m-auto px-16 pb-16 grid grid-cols-2 gap-10 place-items-center
+        @apply h-full w-full p-16 grid grid-cols-2 place-items-center
     }
 
     #projects .pGrid .gridCard {
-        @apply h-full w-full p-8 transition-all duration-300 ease-in-out flex flex-col
+        @apply h-5/6 w-5/6 p-8 transition-all duration-300 ease-in-out flex flex-col flex-shrink-0
         
         bg-neutral-800 rounded-lg drop-shadow-[3px_3px_15px_rgba(0,0,0,.85)]
     }
@@ -31,6 +31,7 @@
     }
 
     /* Card Content */
+
         /* Title */
     #projects .gridCard .title h2 {
         @apply text-center text-3xl pt-2 pb-4 tracking-wider font-semibold drop-shadow-[0px_0px_0.5px_rgba(255,255,255,.8)]
@@ -53,6 +54,11 @@
     }
 
         /* Stack */
+    
+    #projects .gridCard .stack {
+        @apply h-full flex justify-center items-center p-2
+    }
+
     #projects .gridCard .stack p {
         @apply text-center text-lg tracking-wide py-2
     }
@@ -63,7 +69,7 @@
     }
 
     #projects .gridCard .links .wrapper {
-        @apply w-4/5 h-1/2
+        @apply w-4/5
 
         bg-gradient-to-r from-[#82b4ed] to-[#1e79e1] rounded-xl
     }
@@ -73,9 +79,79 @@
     }
 
     #projects .gridCard .links .wrapper button p {
-        @apply px-2 font-bold tracking-wider
+        @apply p-2 font-bold tracking-wider
     }
 
+    @media screen and (max-width:1800px) {
+        #projects .pGrid .gridCard .thumbnail .wrapper {
+            @apply w-32 h-32
+        }
+    }
+
+    @media screen and (max-width:1500px) {
+
+        #projects .pGrid {
+            @apply gap-10
+        }
+
+        #projects .pGrid .gridCard {
+            @apply w-full
+        }
+
+  
+    }
+
+    @media screen and (max-width:1200px) {
+
+        #projects .pGrid .gridCard .stack p {
+            @apply text-base
+        }
+
+  
+    }
+
+    @media screen and (max-width:940px) {
+
+        #projects{
+            @apply px-4
+        }
+
+        #projects .pGrid{
+            @apply w-full h-full
+        }
+    }
+
+    @media screen and (max-width:750px) {
+
+        #projects{
+            @apply h-fit
+        }
+
+        #projects .pGrid{
+            @apply grid-cols-1
+        }
+
+        #projects .pGrid .gridCard{
+            @apply h-fit
+        }
+
+
+    }
+
+    @media screen and (max-width:550px) {
+
+        #projects .title h1 {
+            @apply text-5xl
+        }
+
+        #projects .pGrid{
+            @apply px-0
+        }
+
+    
+
+
+    }
 
 
 
