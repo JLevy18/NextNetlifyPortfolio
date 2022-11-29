@@ -117,25 +117,16 @@
         }
 
         #projects .pGrid{
-            @apply w-full h-full
-        }
-    }
-
-    @media screen and (max-width:750px) {
-
-        #projects{
-            @apply h-fit
-        }
-
-        #projects .pGrid{
-            @apply grid-cols-1
+            @apply w-full h-full grid-cols-1 px-0
         }
 
         #projects .pGrid .gridCard{
-            @apply h-fit
+            @apply h-fit gap-5
         }
 
-
+        #projects{
+            @apply h-fit px-4
+        }
     }
 
     @media screen and (max-width:550px) {

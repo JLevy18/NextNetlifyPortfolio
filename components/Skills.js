@@ -1,7 +1,11 @@
-import React from 'react'
+import Image from 'next/image';
+import React, {useEffect} from 'react'
 import { FaRegLightbulb } from 'react-icons/fa'
 
 function Skills() {
+
+  
+
   return (
     <div id='skills'>
       <div className='skillBrief'>
@@ -9,9 +13,8 @@ function Skills() {
           <div className='title'>
             <h1><FaRegLightbulb size={32} style={{paddingRight: 10}}/>Always Learning</h1>
           </div>
-          <p className='quote'>“Live as if you were to die tomorrow. Learn as if you were to live forever.” <br/>– Mahatma Gandhi</p>
           <div className='content'>
-            <p>Software development embodies a <b>rapidly evolving</b> industry such that constantly learning how others <b>efficiently</b> implement systems is paramount to producing <b>successful</b> solutions.</p>
+            <p>When I was in high school one of my technical teachers told me something along the lines of: <br/><br/><b>"when one understands programming logic and design one can learn any new language in weeks."</b><br/><br/>In order to remain competitive, I am constantly sharpening my skills and learning new frameworks.</p>
           </div>
         </div>
       </div>
@@ -19,62 +22,86 @@ function Skills() {
           <div className='skillGrid'>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/html5.svg'></object>
+              <div className="icon">
+                <Image src="/skills/html5.svg" layout='fill' />
+              </div>
               <p>HTML5</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/css3.svg'></object>
+              <div className="icon">
+                <Image src="/skills/css3.svg" layout='fill' />
+              </div>              
               <p>CSS3</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/react.svg'></object>
+              <div className="icon">
+                <Image src="/skills/react.svg" layout='fill' />
+              </div>
               <p>ReactJS</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/next.svg'></object>
-              <p id='js'>NextJS</p>
+              <div className="icon">
+                <Image src="/skills/spring.svg" layout='fill' />
+              </div>
+              <p id='js'>Spring</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/js.svg'></object>
+              <div className="icon">
+                <Image src="/skills/js.svg" layout='fill' />
+              </div>
               <p id='js'>Javascript</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/sql.svg'></object>
+              <div className="icon">
+                <Image src="/skills/sql.svg" layout='fill' />
+              </div>
               <p>SQL</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/java.svg'></object>
+              <div className="icon">
+                <Image src="/skills/java.svg" layout='fill' />
+              </div>
               <p>Java</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/c++.svg'></object>
+              <div className="icon">
+                <Image src="/skills/c++.svg" layout='fill' />
+              </div>
               <p>C++</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/unreal.svg'></object>
+              <div className="icon">
+                <Image src="/skills/unreal.svg" layout='fill' />
+              </div>
               <p>Unreal</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/opengl.svg'></object>
+              <div className="icon">
+                <Image src="/skills/opengl.svg" layout='fill' />
+              </div>
               <p>OpenGL</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/git.svg'></object>
+              <div className="icon">
+                <Image src="/skills/git.svg" layout='fill' />
+              </div>
               <p>Git</p>
             </div>
 
             <div className="iconWrapper">
-              <object className="icon" type="image/svg+xml" data='/skills/bash.svg'></object>
+              <div className="icon">
+                <Image src="/skills/bash.svg" layout='fill' />
+              </div>
               <p>Bash</p>
             </div>
 

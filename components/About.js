@@ -21,7 +21,7 @@ function About() {
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 500
+    speed: 500,
   };
 
 

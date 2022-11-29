@@ -81,6 +81,101 @@
         @apply mx-[25rem]
     }
 
+    @media screen and (max-width:1800px) {
+        #about .timeline {
+            @apply mx-[20rem]
+        }
+    }
+
+    @media screen and (max-width:1500px) {
+        #about {
+            @apply pb-20
+        }
+
+        #about .timeline {
+            @apply mx-[10rem]
+        }
+
+        #about .card{
+            @apply w-3/5 mt-20 mb-32
+        }
+    }
+
+    @media screen and (max-width:1100px) {
+        #about .timeline {
+            @apply mx-0
+        }
+
+        #about .card{
+            @apply w-4/5 mb-16 mt-0
+        }
+    }
+
+    @media screen and (max-width:940px) {
+
+        #about {
+            @apply px-4 h-fit
+        }
+
+        #about .timeline {
+            @apply mx-0
+        }
+
+        #about .card{
+            @apply w-full h-3/4 mb-16
+        }
+
+        #about .card .content{
+            @apply text-2xl leading-10
+        }
+    }
+
+    @media screen and (max-width:750px) {
+
+        #about .card{
+            @apply mb-0
+        }
+
+        #about .timelineWrapper {
+            @apply px-0
+        }
+
+        #about .timelineTitle{
+            @apply pt-8
+        }
+
+        #about .timelineTitle h2 {
+            @apply text-2xl
+        }
+
+    }
+
+    @media screen and (max-width:450px) {
+
+        #about .timelineTitle h2 {
+            @apply text-2xl
+        }
+
+        #about .card {
+            @apply h-fit
+        }
+
+        #about .card .title {
+            @apply h-fit
+        }
+
+        #about .timelineTitle {
+            @apply hidden
+        }
+
+        #about .timelineWrapper {
+            @apply hidden
+        }
+
+    }
+
+
+
 
     @layer utilities {
         @variants responsive {
@@ -106,4 +201,4 @@
 /* Slider Dots */
 #about .slick-dots li button:before{
     color: white !important;
- }
+}
