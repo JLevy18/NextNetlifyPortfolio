@@ -1,13 +1,14 @@
 import React from 'react'
-import { FaCode, FaYoutube } from 'react-icons/fa'
+import { FaCode, FaYoutube, FaBook } from 'react-icons/fa'
 
 function Projects() {
   return (
     <div id='projects'>
 
       <div className='title'>
+ 
         <h1>
-          Projects
+          Recent Projects
         </h1>
       </div>
 

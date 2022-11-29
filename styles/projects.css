@@ -26,10 +26,6 @@
         bg-neutral-800 rounded-lg drop-shadow-[3px_3px_15px_rgba(0,0,0,.85)]
     }
 
-    #projects .pGrid .gridCard:hover {
-        @apply scale-105 delay-100
-    }
-
     /* Card Content */
 
         /* Title */
@@ -69,7 +65,7 @@
     }
 
     #projects .gridCard .links .wrapper {
-        @apply w-4/5
+        @apply w-4/5 transition-all ease-in-out
 
         bg-gradient-to-r from-[#82b4ed] to-[#1e79e1] rounded-xl
     }
@@ -80,6 +76,10 @@
 
     #projects .gridCard .links .wrapper button p {
         @apply p-2 font-bold tracking-wider
+    }
+
+    #projects .gridCard .links .wrapper:hover{
+        @apply scale-105 duration-500
     }
 
     @media screen and (max-width:1800px) {

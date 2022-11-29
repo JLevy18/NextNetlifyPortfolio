@@ -128,7 +128,7 @@ const ContactForm = () => {
                 </div>
                 <div className="mb-3 pt-0">
                     <button
-                        className="bg-blue-500 text-zinc-100 active:bg-[#1e79e1] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="bg-gradient-to-r from-[#82b4ed] to-[#1e79e1] rounded-xl text-zinc-100 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="submit"
                     >
                         Submit
