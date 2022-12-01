@@ -13,7 +13,7 @@
     }
 
     #skills .card {
-        @apply flex flex-col items-center rounded-xl my-10
+        @apply flex flex-col items-center rounded-xl my-5
         
         bg-zinc-800 w-4/5 h-fit shadow-[0px_0px_30px_5px_rgba(0,0,0,0.8)] px-4 pb-12 pt-8
     }
@@ -34,13 +34,28 @@
 
     #skills .card .content p {
 
-        @apply text-center text-2xl text-zinc-200 text-shadow leading-8
+        @apply text-center text-xl text-zinc-200 text-shadow leading-8
     }
 
     #skills .card .content b {
 
-        @apply text-[#1e79e1] text-shadow-md text-3xl
+        @apply text-[#1e79e1] text-shadow-md text-2xl
     } 
+
+    /* Game info */
+
+    #skills .card.game {
+        @apply py-4 w-fit
+    }
+
+    #skills .card.game p {
+        @apply text-lg
+    }
+
+    #skills .card.game b {
+        @apply text-xl
+    }
+
 
 
     /* SkillsGrid Section */
@@ -53,13 +68,19 @@
         @apply grid grid-cols-4 gap-5
     }  
 
+        /* Cards (Front) */
+
     #skills .iconWrapper {
         @apply flex flex-col items-center transition-all duration-300 ease-in-out
         m-2 bg-zinc-800 rounded-xl p-4 shadow-[0px_0px_10px_1px_rgba(0,0,0,0.5)]
     }
+        /* Match Found */
+    #skills .iconWrapper.found {
+        @apply bg-green-900
+    }
 
     #skills .iconWrapper p {
-        @apply text-center text-zinc-200 text-2xl mt-2 tracking-[.2rem]
+        @apply text-center text-zinc-200 text-xl mt-2 tracking-[.2rem]
     }
 
     #skills .iconWrapper:hover{
@@ -67,7 +88,111 @@
     }
     
     #skills .icon {
-        @apply w-24 h-24 scale-100
+        @apply w-24 h-24 scale-100 m-auto
+    }
+
+        /* Cards (Back) */
+
+    #skills .back {
+        @apply absolute flex w-full h-full justify-center items-center -mt-4
+    }
+
+    #skills .back .color {
+        @apply w-1/2 h-1/2 rounded-full
+    }
+
+    /* Colors */
+
+    #skills .back .color#red {
+        @apply bg-red-600
+    }
+
+    #skills .back .color#orange {
+        @apply bg-orange-600
+    }
+
+    #skills .back .color#yellow {
+        @apply bg-yellow-600
+    }
+
+    #skills .back .color#green {
+        @apply bg-green-600
+    }
+
+    #skills .back .color#blue {
+        @apply bg-blue-600
+    }
+
+    #skills .back .color#purple {
+        @apply bg-purple-600
+    }
+
+    @media screen and (max-width:1500px) {
+        #skills .icon {
+            @apply w-16 h-16
+        }
+
+        #skills .iconWrapper p {
+            @apply text-base
+        }
+        
+        #skills .card .content p{
+            @apply text-lg
+        }
+
+        #skills .card .content b{
+            @apply text-xl
+        }
+
+        #skills .card.game p {
+            @apply text-lg
+        }
+    
+        #skills .card.game b {
+            @apply text-xl
+        }
+    }
+
+    @media screen and (max-width:1300px) {
+
+        #skills {
+            @apply flex-col justify-center items-center h-fit py-16
+        }
+
+        #skills .iconWrapper p {
+            @apply text-sm
+        }
+
+        #skills .skillBrief {
+            @apply w-full
+        }
+
+        #skills .card {
+            @apply p-5
+        }
+
+        #skills .card .content {
+            @apply p-0
+        }
+
+        #skills .skillSec {
+            @apply w-full
+        }
+    }
+
+    @media screen and (max-width:940px) {
+        #skills{
+            @apply px-4
+        }
+        #skills .card {
+            @apply w-full
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        #skills .skillGrid {
+            @apply grid-cols-3 gap-0
+        }
     }
 
     @layer utilities {
@@ -86,7 +211,33 @@
             }
         } 
     }    
-  
 
+}
 
+/* Matching Game */
+
+#skills .iconWrapper {
+    transform-style: preserve-3d;
+}
+
+#skills .iconWrapper.open{
+    transform: rotateY(180deg);
+}
+
+#skills .iconWrapper.reset{
+    transition-duration: 1500ms;
+}
+
+#skills .iconWrapper.gameover{
+    transform: rotateY(720deg);
+    transition-duration: 1500ms;
+}
+
+#skills .front {
+    backface-visibility: hidden;
+}
+
+#skills .back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "iconSrc": "/skills/html5.svg",
+        "note": "HTML5"
+    },
+    {
+        "iconSrc": "/skills/css3.svg",
+        "note": "CSS3"
+    },
+    {
+        "iconSrc": "/skills/react.svg",
+        "note": "React"
+    },
+    {
+        "iconSrc": "/skills/spring.svg",
+        "note": "Spring"
+    },
+    {
+        "iconSrc": "/skills/js.svg",
+        "note": "Javascript"
+    },
+    {
+        "iconSrc": "/skills/sql.svg",
+        "note": "SQL"
+    },
+    {
+        "iconSrc": "/skills/java.svg",
+        "note": "Java"
+    },
+    {
+        "iconSrc": "/skills/c++.svg",
+        "note": "C++"
+    },
+    {
+        "iconSrc": "/skills/unreal.svg",
+        "note": "Unreal "
+    },
+    {
+        "iconSrc": "/skills/opengl.svg",
+        "note": "OpenGL"
+    },
+    {
+        "iconSrc": "/skills/git.svg",
+        "note": "Git"
+    },
+    {
+        "iconSrc": "/skills/bash.svg",
+        "note": "Bash"
+    }
+]
